@@ -13,6 +13,13 @@ function saveData (item) {
   //console.log(item[0].id + " 9am")
 }
 
+$(document).ready (function(){
+  function getData(){
+    h9[0].innerHTML = localStorage.getItem("9am");
+    h10[0].innerHTML = localStorage.getItem("10am");
+  }
+  getData();
+})
 
 // handle displaying the time
 function displayTime() {
