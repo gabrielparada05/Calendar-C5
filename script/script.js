@@ -1,7 +1,44 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+var timeDate = $("#currentDay");
+var btn1 = $("#btn1");
+var btn2 = $("#btn2");
+var h9 = $("#9am")
+var h10 = $("#10am")
+
+
+function saveData (item) {
+  localStorage.setItem(`${item[0].id}`, item[0].value)
+  //console.log(item[0].id + " 9am")
+}
+
+
+// handle displaying the time
+function displayTime() {
+  var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
+  timeDate.text(rightNow);
+}
+
+displayTime();
+setInterval(displayTime, 1000);
+
+function ControlDate () {
+var controlTime = dayjs().format("h");
+setInterval(1000);
+console.log(ControlDate);
+}
+
+
+  
+$(btn1).on("click",function(){
+  ///saveData()
+})
+
+
+  
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -20,4 +57,4 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+
