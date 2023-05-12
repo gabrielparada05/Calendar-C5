@@ -1,11 +1,10 @@
+/*General Style - google font */
+
 body {
   font-family: 'Cairo', sans-serif;
   font-size: 16px;
 }
 
-#currentDay {
-  font-family: 'Shadows Into Light', cursive;
-}
 textarea {
   background: transparent;
   border: none;
@@ -14,15 +13,25 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
+/*Timer - google font */
+#currentDay {
+  font-family: 'Shadows Into Light', cursive;
+  font: size 26px;px;
+}
+
+/*General Style */
 
 .bold {
   font-weight: 700;
   text-align: center;
 }
 
+/*h1 */
 .lead {
   text-align: center;
 }
+
+/*Time block*/
 .description {
   white-space: pre-wrap;
 }
@@ -40,11 +49,9 @@ textarea {
   color: #000000;
   border-top: 1px dashed #000000;
   border-left: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
 }
 
-textarea {
-  color: #000000;
-}
 
 .past {
   background-color: #d3d3d3;
@@ -53,12 +60,13 @@ textarea {
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: blue;
+  font-weight: bold;
 }
 
 .saveBtn {
